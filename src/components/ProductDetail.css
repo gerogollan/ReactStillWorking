@@ -1,0 +1,140 @@
+
+
+
+.PDContainer{
+    margin: 20px;
+    display: flex;
+}
+
+.leftContainer{
+   width: 500px;
+   height: 500px;
+
+   /* para la imagen */
+   position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+
+.leftContainer img {
+    width: 100%;
+    transition: transform 0.1s ease-out}
+
+
+.leftContainer:hover img{
+    cursor: none; 
+}
+
+
+.rightContainer{
+    width: 500px;
+   height: 500px;
+   background-color: rgb(66, 66, 66);
+
+}
+
+
+.PDImage{
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.PDImage:hover{
+    transform: scale(1.3);
+    transition: transform 0.2s;
+}
+
+.PDTitle{
+
+}
+
+hr{
+    height: 2px;
+    background-color: black;
+    width: 80%;
+    color: black;
+    border: none;
+  }
+
+.PDDescription{
+    justify-self: center;
+    width: 80%;
+    font-family: monospace;
+    font-size: x-large;
+    
+}
+
+.PDPrice{
+    margin: 50px 0px;
+    font-size: x-large;
+    font-family: monospace;
+
+}
+
+.PDButton{
+width: 40%;
+transition: transform 0.5s ease-out;
+}
+.PDButton:hover{
+    
+    box-shadow: 0 0 10px #5fffb7e6;
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+/* botones de agregar y restar */
+.PDCounter {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 0px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.PDCountButton {
+    background: transparent;
+    border: 2px solid #5fffb7e6; 
+    color: #5fffb7e6;
+    font-size: 14px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.ButtonPlus{
+    margin: 0px;
+}
+
+.PDCountButton:hover {
+    background: #5fffb7e6;
+    transform: scale(1.3);
+    color: #1e1e1e; 
+    transition: all 0.2s ease-in-out;
+}
+
+.PDCountButton:disabled {
+    border-color: #999;
+    color: #999;
+    transform: scale(0.8);
+    cursor: not-allowed;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.PDCounter span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    min-width: 30px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}

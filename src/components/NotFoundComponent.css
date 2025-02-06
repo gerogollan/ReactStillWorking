@@ -1,0 +1,27 @@
+.NotFoundContainer{
+position: relative;
+width: 100%;
+max-height: 1000px;
+max-width: 2000px;
+margin: 5px;
+}
+
+.NotFoundContainer video{
+    width: 100%;
+    min-width: 100%;
+    display: block;
+}
+
+.TextOverposted{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,);
+    text-align: center;
+    color: rgb(235, 233, 233);
+    font-size: 20px;
+    
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}
