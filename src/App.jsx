@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 
+import CartComponent from './components/CartComponent';
 import ItemListContainer from './components/ItemListContainer';
 import ProductDetail from './components/ProductDetail';
 import NotFoundComponent from './components/NotFoundComponent';
@@ -11,6 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
+
         <Routes>
           <Route
             exact
@@ -26,6 +28,8 @@ function App() {
 
 
           <Route exact path='/product/:id' element={<ProductDetail />}/>
+
+          <Route exact path='/cart' element={<CartComponent text="Cart"/>}/>
 
 
           <Route exact path="*" element={<NotFoundComponent />} />

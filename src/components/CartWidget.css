@@ -1,9 +1,25 @@
+
+.cartWidget{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 button.cartWidget {
   margin-right: 15px;
   margin-left: 0;
+  font-size: x-large;
 }
 
 .imgCart {
-  width: 15px;
-  height: 15px;
+  padding-left: 5px;
+  width: 20px;
+  height: 20px;
 }
+
+.imgCart:hover{
+  filter: invert(100%);
+}
+
+

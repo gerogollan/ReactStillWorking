@@ -7,22 +7,44 @@ header {
   margin: 0;
   padding: 0;
   align-items: center;
-  background: white;
+  background: rgb(255, 255, 255);
+
   justify-content: space-between;
   display: flex;
   box-shadow: 5px 2px 20px black;
+  font-size: x-large;
 }
 
 .cartWidgetContainer {
   padding: 1.5em;
+  width: 190px;
+  display: flex;
+  justify-content: end;
 }
 
+.logoContainer{
+  height:95px;
+}
+
+.logo{
+  padding: 5px 21px;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 5px #5fffb7e6);
+  scale: 1.1;
+  transition: transform 0.2s;
+}
+
+
 nav {
-  padding: 1.5em;
+  padding: 1.5em, 0px;
+  
 }
 
 button.firstButton {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 button {

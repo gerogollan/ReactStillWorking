@@ -1,6 +1,7 @@
 main {
   color: white;
-  background-color: #111111;
+  /* background-image: url("https://i.imgur.com/bdqWKUJ.jpeg" ); */
+  background-color: #0f0f0f;
   border-radius: 20px;
   width: 100%;
   height: 200px;
@@ -18,7 +19,7 @@ main {
 }
 
 h1 {
-  padding-top: 30px;
+  padding-top: 70px;
 }
 
 .H2text {

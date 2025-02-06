@@ -1,14 +1,24 @@
+import { Link } from 'react-router-dom';
 import ButtonComponent from './ButtonComponent.jsx';
 import CartWidget from './CartWidget.jsx';
 import './NavBar.css';
 
 export default function NavBar() {
   return (
+    <>
     <header>
-      <div>
-        {/* //aca va el logo de Vanguard no un boton */}
-        <ButtonComponent to="/" text="LOGO" />
-      </div>
+
+     {/* aca deberia ir un logo */}
+
+     <div className="logoContainer">
+      <Link to="/">
+          <img 
+            src="https://i.imgur.com/fstyU5X.png" 
+            alt="Logo" 
+            className="logo"
+          />
+      </Link>
+        </div>
 
       <nav>
         <ButtonComponent className="firstButton" to="/category/shoes" text="Shoes" />
@@ -17,8 +27,9 @@ export default function NavBar() {
       </nav>
 
       <div className="cartWidgetContainer">
-        <CartWidget className="cartWidget" />
+        <CartWidget text="Cart" className="cartWidget" />
       </div>
     </header>
+  </>
   );
 }
