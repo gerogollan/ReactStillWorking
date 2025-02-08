@@ -1,10 +1,9 @@
 body {
   color: white;
-  /* background-color: #0f0f0f; */
-  /* estilos agregados */
-  background-image: url("https://i.imgur.com/bdqWKUJ.jpeg" );
-  background-size: cover;
   
+  /* estilos agregados */
+  background-image: url("https://i.imgur.com/goOtaGT.jpeg" );
+  background-size: cover;
   background-repeat: no-repeat;
   
   margin: 0;

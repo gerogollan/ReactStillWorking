@@ -21,7 +21,7 @@ export default function ItemListContainer(props) {
       <h1>
         {props.text} {catId}
       </h1>
-      <h2 className="H2text"> ¡We re starting!</h2>
+      <h2 className="H2text">Look this new styles!</h2>
 
       <div className="products-grid">
         {products?.map((product) => (

@@ -31,7 +31,7 @@
 .rightContainer{
     width: 500px;
    height: 500px;
-   background-color: rgb(66, 66, 66);
+   background-color: #0f0f0fc0;
 
 }
 
@@ -48,15 +48,12 @@
     transition: transform 0.2s;
 }
 
-.PDTitle{
-
-}
 
 hr{
     height: 2px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     width: 80%;
-    color: black;
+    color: rgb(255, 255, 255);
     border: none;
   }
 

@@ -35,6 +35,10 @@ function App() {
           <Route exact path="*" element={<NotFoundComponent />} />
         </Routes>
       </BrowserRouter>
+
+      <footer>
+      <h3> © 2025 Vanguard • Exclusivity & Style in Every Detail </h3>
+      </footer>
     </>
   );
 }
