@@ -7,7 +7,7 @@
 }
 
 .leftContainer{
-   width: 500px;
+   width: 100%;
    height: 500px;
 
    /* para la imagen */
@@ -29,9 +29,9 @@
 
 
 .rightContainer{
-    width: 500px;
+    width: 100%;
    height: 500px;
-   background-color: #0f0f0fc0;
+   background-color: #0f0f0fe1;
 
 }
 
@@ -51,15 +51,15 @@
 
 hr{
     height: 2px;
+    margin: 25px 0px;
     background-color: rgb(255, 255, 255);
-    width: 80%;
-    color: rgb(255, 255, 255);
     border: none;
   }
 
 .PDDescription{
+    padding: 5px 70px;
     justify-self: center;
-    width: 80%;
+    width: 400px;
     font-family: monospace;
     font-size: x-large;
     

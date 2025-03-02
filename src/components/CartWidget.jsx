@@ -1,14 +1,16 @@
-import React from 'react';
-import { useContext } from 'react';
-import '../components/CartWidget.css';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext';
+//codigo original
+ import React from 'react';
+ import { useContext } from 'react';
+ import '../components/CartWidget.css';
+ import { Link } from 'react-router-dom';
+ import { CartContext } from '../context/CartContext';
 
-export default function CartWidget() {
+ export default function CartWidget() {
 
-  const [cart, setCart] = useContext(CartContext);
+ const [cart, setCart] = useContext(CartContext);
+ 
   return (
-    <>
+     <>
         
       <Link to="/cart">
        <button className="cartWidget"> 
@@ -20,5 +22,5 @@ export default function CartWidget() {
     
       
     </>
-  );
-}
+   );
+ }

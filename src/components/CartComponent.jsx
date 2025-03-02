@@ -11,23 +11,38 @@ export default function CartComponent(props) {
     setCart([]);
   };
 
-  if (cart.length === 0) {
-    return (
-      <main className="emptyCartContainer">
-        <h1 className="h1emptyCart">Your Cart is Empty!</h1>
-        <ButtonComponent text="Go back to the store" to="/" />
-      </main>
-    );
-  }
-
   return (
-    <main className="CartTextContainer">
+    <>
       <NavBar />
-      <h1>{props.text}</h1>
-      <h2>Items in your Cart</h2>
-      <h1>Carrito: {cart.length}</h1>
-
-      <button onClick={handleEmptyCart}>Vaciar carrito</button>
-    </main>
+      <section className="CartTextContainer">
+        {cart.length === 0 ? (
+          <main className="emptyCartContainer">
+            <h1 className="h1EmptyCart">Your Cart is Empty!</h1>
+            <ButtonComponent text="Go back to the store" to="/" />
+          </main>
+        ) : (
+          <div className="cartItems">
+            <h1 className="h1CartList">{props.text}</h1>
+            <h2>Items in your Cart: {cart.length}</h2>
+            <hr />
+            {cart.map((product, index) => (
+              <div key={index} className="cartItemCard">
+                <div className="cartItemImageContainer">
+                  <img src={product.image} alt={product.title} className="productCartImage" />
+                </div>
+                <div className="cartItemDetails">
+                  <h3>{product.title}</h3>
+                  <p>Price: ${product.price}</p>
+                  <p>Quantity: {product.quantity}</p> {/* Agregada la cantidad */}
+                </div>
+              </div>
+            ))}
+            <button className="emptyCartButton" onClick={handleEmptyCart}>
+              Empty Cart
+            </button>
+          </div>
+        )}
+      </section>
+    </>
   );
 }

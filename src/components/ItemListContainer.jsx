@@ -8,12 +8,19 @@ import { getCategory , getProducts } from '../firebase/firebase';
 export default function ItemListContainer(props) {
   const [products, setProducts] = useState(null);
   const { catId } = useParams();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!catId) {
-      getProducts().then((response) => setProducts(response));
+      getProducts().then((response) => { 
+        setProducts(response) 
+        setLoading(false);
+     });
     } else {
-      getCategory(catId).then((response) => setProducts(response));
+      getCategory(catId).then((response) => {
+        setProducts(response)
+        setLoading(false);
+      });
     }
   }, [catId]);
 
@@ -23,12 +30,20 @@ export default function ItemListContainer(props) {
         {props.text} {catId}
       </h1>
       <h2 className="H2text">Look this new styles!</h2>
+     
+     {loading ? <h2>  LOADING!  </h2>:
+      
+      
+       
+       <div className="products-grid">
+      {products?.map((product) => (
+      <ProductCard key={product.id} product={product} />
+      ))}
+     </div>
+       
+       }  
 
-      <div className="products-grid">
-        {products?.map((product) => (
-        <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+
     </>
   );
 }

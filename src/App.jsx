@@ -82,8 +82,8 @@ export default App;
 // dentro de CartComponent
 //poder eliminar productos del carrito o vaciarlo
 
-//renderizado condicional en el CartWidget, ocultar el componente
-//si el carrito esta vacio.
+//renderizado condicional en el CartWidget, ocultar el componente✔
+//si el carrito esta vacio.✔
 
 
 //crear una function que haga una primer order de pedido con el formato
@@ -91,7 +91,7 @@ export default App;
 
 //crear un form que reciba los datos del buyer y que se envie a firebase
 
-//Agregar un Loader en el ItemListContainer y en el ItemDetail
+//Agregar un Loader en el ItemListContainer y en el ItemDetail ✔
 // utilizando un ternario / pondría una imagen de un skater girando
 //clase 6
 

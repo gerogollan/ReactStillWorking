@@ -1,67 +1,77 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
-import { getProduct,   } from "../firebase/firebase";
+import { getProduct } from "../firebase/firebase";
 import { CartContext } from "../context/CartContext";
-import { useContext } from "react";
 
 export default function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [count, setCount] = useState(0);
-  const maxCount = 10;
-  const minCount = 0;
-
-  // const handleAddToCart =() =>{
-  //   alert("This items are now in your cart: " + count + " " + product.title);
-  //  }
-
+  const [count, setCount] = useState(1);
+  const [loading, setLoading] = useState(true);
   const [cart, setCart, addProduct] = useContext(CartContext);
-
 
   useEffect(() => {
     async function fetchProduct() {
       const productData = await getProduct(id);
       setProduct(productData);
-  } fetchProduct() } , [id]);
+      setLoading(false);
+    }
+    fetchProduct();
+  }, [id]);
+
+  const handleClick = () => {
+    if (product) {
+      addProduct(product, count);
+      console.log(cart.length, cart.title);
+    }
+  };
+
+  const minCount = 1;
+  const maxCount = product?.stock;
 
   return (
     <>
-    <div className="PDContainer">
+      {loading ? (
+        <h2> LOADING! </h2>
+      ) : (
+        <div className="PDContainer">
+          <div className="leftContainer">
+            <img className="PDImage" src={product?.image} alt={product?.description} />
+          </div>
 
-      <div className="leftContainer">
-          <img className="PDImage"  src={product?.image} alt={product?.description} />
-      </div>
+          <div className="rightContainer">
+            <h1 className="PDTitle">{product?.title}</h1>
+            <hr />
+            <p className="PDDescription">{product?.description}</p>
+            <p className="PDPrice">$ {product?.price} ARS</p>
 
-      <div className="rightContainer"> 
-          <h1 className="PDTitle" >{product?.title}</h1>
-          <hr></hr>
-         <p className="PDDescription">{product?.description}</p>
-         <p className="PDPrice">$ {product?.price} ARS</p>
+            <div className="PDCounter">
+              <button
+                className="PDCountButton ButtonMinus"
+                onClick={() => setCount(count > minCount ? count - 1 : count)}
+                disabled={count <= minCount}
+              >
+                -
+              </button>
 
-         <button className="PDButton" 
-                 onClick={addProduct}  >Add to Cart</button> 
+              <span>{count}</span>
 
+              <button
+                className="PDCountButton ButtonPlus"
+                onClick={() => setCount(count < maxCount ? count + 1 : count)}
+                disabled={count >= maxCount}
+              >
+                +
+              </button>
+            </div>
 
-        <div className="PDCounter" >
-          <button 
-            className="PDCountButton ButtonMinus"  
-            onClick={() => setCount(count > minCount ? count - 1 : count)}
-            disabled={count <= minCount}
-          >
-            -
-          </button>
-          <span>{count}</span>
-          <button 
-            className="PDCountButton ButtonPlus" 
-            onClick={() => setCount(count < maxCount ? count + 1 : count)}
-            disabled={count >= maxCount}
-          >
-            +
-          </button>
-         </div>
-      </div>
-    </div>
+            <button className="PDButton" onClick={handleClick}>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
