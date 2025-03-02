@@ -73,23 +73,25 @@ export default App;
 //Recibir los productos desde firebase  ✔
 //mostrar los productos en el ItemListContainer  ✔
 //mostrar un producto en el ItemDetail pasando el id por parametro ✔
-// clase 7 ✔
+// ✔
 
 //crear componente de itemCount en el itemdeatil que realize
 //validaciones de (valor minimo, limite por stock)
 
-//hacer que los productos agregados al carrito se rendericen dentro de CartComponent
+//hacer que los productos agregados al carrito se rendericen 
+// dentro de CartComponent
+//poder eliminar productos del carrito o vaciarlo
 
 //renderizado condicional en el CartWidget, ocultar el componente
 //si el carrito esta vacio.
 
 
-//crear una funcion que haga una primer order de pedido con el formato
+//crear una function que haga una primer order de pedido con el formato
 // {buyer: {name: "", email:"", phone:""}, items: [{id: "", title:"", price:""}], total: ""}
 
 //crear un form que reciba los datos del buyer y que se envie a firebase
 
-//Agregar un Loading en el ItemListContainer y en el ItemDetail
+//Agregar un Loader en el ItemListContainer y en el ItemDetail
 // utilizando un ternario / pondría una imagen de un skater girando
 //clase 6
 

@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom';
 import ButtonComponent from './ButtonComponent.jsx';
 import CartWidget from './CartWidget.jsx';
+
+
 import './NavBar.css';
 
 export default function NavBar() {
+ 
+
+  
   return (
     <>
     <header>
 
-     {/* aca deberia ir un logo */}
 
      <div className="logoContainer">
       <Link to="/">
@@ -30,7 +34,7 @@ export default function NavBar() {
           <div className="cartWidgetContainer">
             <CartWidget text="Cart" className="cartWidget" />
           </div>
-        
+         
      
 
     </header>

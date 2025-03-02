@@ -1,32 +1,29 @@
-//Crear el contexto
+import { createContext, useState, useEffect } from "react";
 
-import { createContext, useState } from "react";
+// Crear el contexto
+export const CartContext = createContext(null);
 
-export const CartContext= createContext();
+// Crear el provider
+export function CartProvider({ children }) {
+  const [cart, setCart] = useState([]);
 
+  // Función para añadir productos al carrito
+  const addProduct = (item) => {
+    setCart((prevCart) => {
+      const newCart = [...prevCart, item];
+      console.log("Nuevo carrito después de agregar:", newCart);
+      return newCart;
+    });
+  };
 
-//Crear el provider
-export function CartProvider({children}){
-    const [cart, setCart]= useState([]);
+  // Verificar en consola cada vez que el carrito cambia
+  useEffect(() => {
+    console.log("Carrito actualizado:", cart);
+  }, [cart]);
 
-  //funcion de añadir productos
-  const addProduct = (item) =>{
-    setCart([...cart, item]);
-  }
-
-  //CREAR funcion de eliminar producto
-  //filter o slice segun la documentacion de react
-
-
-  
-  //CREAR function de vaciar carrito
-
-
-    return(
-        <CartContext.Provider value={[cart, setCart , addProduct]}> 
-        {children}
-        </CartContext.Provider>
-    )
+  return (
+    <CartContext.Provider value={[cart, setCart, addProduct]}>
+      {children}
+    </CartContext.Provider>
+  );
 }
-
-

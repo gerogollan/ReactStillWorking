@@ -9,7 +9,7 @@ export default function CartWidget() {
   const [cart, setCart] = useContext(CartContext);
   return (
     <>
-       
+        
       <Link to="/cart">
        <button className="cartWidget"> 
         <div className='CartText'> {cart.length} </div>   
