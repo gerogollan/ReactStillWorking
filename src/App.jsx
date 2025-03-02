@@ -10,6 +10,7 @@ import { CartProvider } from './context/CartContext';
 
 import { getProducts } from './firebase/firebase';
 import { useEffect } from 'react';
+import CheckoutComponent from './components/ChekoutComponent';
 
 
 
@@ -22,12 +23,12 @@ function App() {
 
 
   return (
-    <>
+    <CartProvider>
     
      
       <BrowserRouter>
      
-      <CartProvider>
+      
            <NavBar />
       
      
@@ -52,8 +53,10 @@ function App() {
 
 
           <Route exact path="*" element={<NotFoundComponent />} />
+
+          <Route exact path='/checkout' element={<CheckoutComponent />} />
         </Routes>
-        </CartProvider>
+        
       </BrowserRouter>
 
       
@@ -62,7 +65,7 @@ function App() {
       <footer>
       <h3> © 2025 Vanguard • Exclusivity & Style in Every Detail </h3>
       </footer>
-    </>
+      </CartProvider>
   );
 }
 

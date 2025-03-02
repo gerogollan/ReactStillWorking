@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import { CartContext } from "../context/CartContext";
 import NavBar from "./NavBar";
 import ButtonComponent from "./ButtonComponent";
@@ -9,6 +9,10 @@ export default function CartComponent(props) {
 
   const handleEmptyCart = () => {
     setCart([]);
+  };
+
+  const calculateTotal = () => {
+    return cart.reduce((total, product) => total + product.price, 0);
   };
 
   return (
@@ -33,13 +37,21 @@ export default function CartComponent(props) {
                 <div className="cartItemDetails">
                   <h3>{product.title}</h3>
                   <p>Price: ${product.price}</p>
-                  <p>Quantity: {product.quantity}</p> {/* Agregada la cantidad */}
+                  {/* <p>Quantity: {}</p> */}
                 </div>
+              
               </div>
             ))}
-            <button className="emptyCartButton" onClick={handleEmptyCart}>
+             <hr />
+             
+            <h3 className="h3Total">Total: ${calculateTotal()}</h3>
+
+            <button className="CartButton" onClick={handleEmptyCart}>
               Empty Cart
             </button>
+
+            
+            <ButtonComponent text="Continue with the purchase" className="CartButton" to="/checkout" />
           </div>
         )}
       </section>

@@ -22,13 +22,14 @@ export default function ProductDetail() {
 
   const handleClick = () => {
     if (product) {
-      addProduct(product, count);
-      console.log(cart.length, cart.title);
+      addProduct(product);
+      console.log("Product added:", product.title);
     }
   };
 
-  const minCount = 1;
-  const maxCount = product?.stock;
+  // const minCount = 1;
+  // const maxCount = product?.stock;
+  
 
   return (
     <>
@@ -46,7 +47,7 @@ export default function ProductDetail() {
             <p className="PDDescription">{product?.description}</p>
             <p className="PDPrice">$ {product?.price} ARS</p>
 
-            <div className="PDCounter">
+            {/* <div className="PDCounter">
               <button
                 className="PDCountButton ButtonMinus"
                 onClick={() => setCount(count > minCount ? count - 1 : count)}
@@ -64,7 +65,7 @@ export default function ProductDetail() {
               >
                 +
               </button>
-            </div>
+            </div> */}
 
             <button className="PDButton" onClick={handleClick}>
               Add to Cart

@@ -6,8 +6,10 @@ import { getFirestore ,
          collection, 
          getDoc , 
          doc , 
+         addDoc ,
          where , 
-         query } 
+         query, 
+         addDoc} 
          from "firebase/firestore";
 
 
@@ -79,3 +81,15 @@ export async function getCategory(catId) {
 
 
 //funcion para crear una orden de pedido
+
+
+export async function createOrder(order){ 
+  const orderCollection = ( db ,'orders')
+  try{
+    const docRef = await addDoc(ordersCollection , order);
+    return order.id;
+  }catch (error){
+    console.log("Hubo un error" , error)
+  }
+  
+}

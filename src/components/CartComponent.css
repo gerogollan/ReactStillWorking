@@ -98,7 +98,12 @@ hr {
   margin: 10px 0;
 }
 
-.emptyCartButton {
+.CartButton {
   margin: 30px;
   font-size: x-large;
+}
+
+
+.h3Total{
+  font-size: xx-large;
 }
