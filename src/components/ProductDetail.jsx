@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
-import { getProduct } from "../../asyncMock";
+import { getProduct,   } from "../firebase/firebase";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -9,13 +11,19 @@ export default function ProductDetail() {
   const [count, setCount] = useState(0);
   const maxCount = 10;
   const minCount = 0;
-  const handleAddToCart =() =>{
-    alert("This items are now in your cart: " + count + " " + product.title);
-  }
+
+  // const handleAddToCart =() =>{
+  //   alert("This items are now in your cart: " + count + " " + product.title);
+  //  }
+
+  const [cart, setCart, addProduct] = useContext(CartContext);
+
 
   useEffect(() => {
-    setProduct(getProduct(id));
-  }, []);
+    async function fetchProduct() {
+      const productData = await getProduct(id);
+      setProduct(productData);
+  } fetchProduct() } , [id]);
 
   return (
     <>
@@ -32,7 +40,7 @@ export default function ProductDetail() {
          <p className="PDPrice">$ {product?.price} ARS</p>
 
          <button className="PDButton" 
-                 onClick={handleAddToCart}  >Add to Cart</button> 
+                 onClick={addProduct}  >Add to Cart</button> 
 
 
         <div className="PDCounter" >

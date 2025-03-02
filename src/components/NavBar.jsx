@@ -25,10 +25,14 @@ export default function NavBar() {
         <ButtonComponent to="/category/clothing" text="Chloting" />
         <ButtonComponent to="/category/accesories" text="Accesories" />
       </nav>
+  
+      
+          <div className="cartWidgetContainer">
+            <CartWidget text="Cart" className="cartWidget" />
+          </div>
+        
+     
 
-      <div className="cartWidgetContainer">
-        <CartWidget text="Cart" className="cartWidget" />
-      </div>
     </header>
   </>
   );

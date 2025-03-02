@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import '../styles/CartComponent.css';
+import './CartComponent.css';
 
 export default function CartComponent(props) {
   return (
