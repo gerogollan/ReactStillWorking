@@ -3,6 +3,7 @@ import "./CheckoutComponent.css";
 import { CartContext } from "../context/CartContext";
 import ButtonComponent from "./ButtonComponent";
 import { createOrder } from "../firebase/firebase";
+import { createOrder } from "../firebase/firebase";
 
 const CheckoutComponent = () => {
     const [cart,setCart] = useContext(CartContext);
@@ -62,21 +63,25 @@ const CheckoutComponent = () => {
     const total = () => {
         return cart.reduce((total, product) => total + product.price, 0);
     };
+    const total = () => {
+        return cart.reduce((total, product) => total + product.price, 0);
+    };
 
-    return (
-        <div>
-            <hr></hr>
+      return (
             <div>
-                <h3>Products you have in the cart</h3>
-                <ul>
-                    {cart.map((product, index) => (
-                        <li key={index}>
-                            {product.title} {product.price} X1
-                        </li>
-                    ))}
-                </ul>
-            </div>
+                  <hr></hr>
+                  <div>
+                        <h3>Products you have in the cart</h3>
+                        <ul>
+                              {cart.map((product, index) => (
+                                    <li key={index}>
+                                          {product.title} {product.price} X1
+                                    </li>
+                              ))}
+                        </ul>
+                  </div>
 
+            <hr></hr>
             <hr></hr>
 
             <form onSubmit={handleSubmit}>
@@ -114,6 +119,11 @@ const CheckoutComponent = () => {
                     />
                 </div>
 
+                <button type="submit">Submit</button>
+                <ButtonComponent to="/cart" text="Go back"></ButtonComponent>
+            </form>
+        </div>
+    );
                 <button type="submit">Submit</button>
                 <ButtonComponent to="/cart" text="Go back"></ButtonComponent>
             </form>
