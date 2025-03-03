@@ -26,11 +26,13 @@ export default function ItemListContainer(props) {
 
   return (
     <>
+    <section>
       <h1>
         {props.text} {catId}
       </h1>
       <h2 className="H2text">Look this new styles!</h2>
      
+      </section>
      {loading ? <h2>  LOADING!  </h2>:
       
       

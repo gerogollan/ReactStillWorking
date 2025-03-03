@@ -2,6 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  
+  scrollbar-width: none;
+  scrollbar-color: rgb(63, 63, 63) #0f0f0f49;;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

@@ -47,32 +47,20 @@ export default function ProductDetail() {
             <p className="PDDescription">{product?.description}</p>
             <p className="PDPrice">$ {product?.price} ARS</p>
 
-            {/* <div className="PDCounter">
-              <button
-                className="PDCountButton ButtonMinus"
-                onClick={() => setCount(count > minCount ? count - 1 : count)}
-                disabled={count <= minCount}
-              >
-                -
-              </button>
-
-              <span>{count}</span>
-
-              <button
-                className="PDCountButton ButtonPlus"
-                onClick={() => setCount(count < maxCount ? count + 1 : count)}
-                disabled={count >= maxCount}
-              >
-                +
-              </button>
-            </div> */}
-
             <button className="PDButton" onClick={handleClick}>
               Add to Cart
             </button>
           </div>
+
+
+
+
+          
         </div>
       )}
+
+      {/* //añadir mas cosas lindas informacion de  "talles" "cambios, etc" */}
+      
     </>
   );
 }

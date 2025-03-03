@@ -1,4 +1,5 @@
 import { useContext} from "react";
+import { Link, } from 'react-router-dom'
 import { CartContext } from "../context/CartContext";
 import NavBar from "./NavBar";
 import ButtonComponent from "./ButtonComponent";
@@ -31,15 +32,39 @@ export default function CartComponent(props) {
             <hr />
             {cart.map((product, index) => (
               <div key={index} className="cartItemCard">
+
                 <div className="cartItemImageContainer">
+                  <Link to={`/category/${product.category }`} >
                   <img src={product.image} alt={product.title} className="productCartImage" />
+                  </Link>
                 </div>
+
                 <div className="cartItemDetails">
                   <h3>{product.title}</h3>
                   <p>Price: ${product.price}</p>
-                  {/* <p>Quantity: {}</p> */}
                 </div>
               
+              {/* <div className="PDCounter">
+              <button
+                className="PDCountButton ButtonMinus"
+                onClick={() => setCount(count > minCount ? count - 1 : count)}
+                disabled={count <= minCount}
+              >
+                -
+              </button>
+
+              <span>{count}</span>
+
+              <button
+                className="PDCountButton ButtonPlus"
+                onClick={() => setCount(count < maxCount ? count + 1 : count)}
+                disabled={count >= maxCount}
+              >
+                +
+              </button>
+            </div> */}
+
+
               </div>
             ))}
              <hr />

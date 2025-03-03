@@ -1,20 +1,18 @@
 .product-card {
-  display: grid;
-  grid-template-rows: 1fr;
-  
-  border: 2px solid #5fffb7e6;
   padding: 10px;
   background-color: #fff;
   color: #000;
   border-radius: 8px;
-  transition: transform 0.2s;
-  margin-bottom: 12px;
+  transition: transform 0.3s;
+  margin-bottom: 0px;
 }
 
 .product-card:hover {
   border: none;
   transform: scale(1.05);
+  border: 2px solid #5fffb7e6;
   box-shadow: 0 0 10px #5fffb7e6;
+  overflow: hidden;
 }
 
 .product-card a:hover{
@@ -23,14 +21,14 @@
 
 .product-image {
   width: 100%;
-  max-width: 150px;
+  max-width: 250px;
   display: block;
   margin: 0 auto 10px;
   background-color: #000;
 }
 
 .details-button {
-  width: 160px;
+  width: 200px;
   background-color: #000;
   color: #fff;
   border: none;
@@ -44,8 +42,9 @@
 
 }
 
-.details-button :hover {
+button.details-button :hover {
   background-color: #5fffb7e6;
+  scale: none;
 }
 
 .details-button a {
@@ -53,3 +52,13 @@
   text-decoration: none;
 }
 
+h3{
+  font-size: xx-large;
+  margin: 5px 0px 5px 0px;
+
+}
+
+p{
+  font-size: x-large;
+  margin: 0px 0px 10px 0px;
+}
