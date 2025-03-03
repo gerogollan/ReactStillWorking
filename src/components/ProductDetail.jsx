@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
 import { getProduct } from "../firebase/firebase";
 import { CartContext } from "../context/CartContext";
+import { BarLoader } from "react-spinners";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -34,7 +35,7 @@ export default function ProductDetail() {
   return (
     <>
       {loading ? (
-        <h2> LOADING! </h2>
+        <BarLoader color="#5fffb7e6" width={700} />
       ) : (
         <div className="PDContainer">
           <div className="leftContainer">

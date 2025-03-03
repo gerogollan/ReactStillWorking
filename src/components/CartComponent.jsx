@@ -69,7 +69,10 @@ export default function CartComponent(props) {
             ))}
              <hr />
              
-            <h3 className="h3Total">Total: ${calculateTotal()}</h3>
+             <div className="TotalContainer">
+             <h3 >Total:</h3>
+            <p className="PTotal"> ${calculateTotal()}</p>
+            </div>
 
             <button className="CartButton" onClick={handleEmptyCart}>
               Empty Cart

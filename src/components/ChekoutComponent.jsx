@@ -68,9 +68,9 @@ const CheckoutComponent = () => {
       <div className="CheckoutContainer">
         {orderId ? (
           <div>
-            {" "}
-            <h1> thanks for your purchase </h1>
-            <h2> your order id is</h2> {orderId}
+            
+            <h1 className="H1Check"> thanks for your purchase </h1>
+            <h2 className="H2Check"> your order id is</h2> {orderId}
             
             <hr></hr>
 

@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import { useState, useEffect } from 'react';
 
+
 import { getCategory , getProducts } from '../firebase/firebase';
+import { BarLoader } from 'react-spinners';
 
 export default function ItemListContainer(props) {
   const [products, setProducts] = useState(null);
@@ -33,7 +35,7 @@ export default function ItemListContainer(props) {
       <h2 className="H2text">Look this new styles!</h2>
      
       </section>
-     {loading ? <h2>  LOADING!  </h2>:
+     {loading ? <BarLoader color="#5fffb7e6" width={700} />  :
       
       
        
