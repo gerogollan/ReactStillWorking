@@ -83,12 +83,14 @@ export async function getCategory(catId) {
 
 
 export async function createOrder(order){ 
-  const orderCollection = ( db ,'orders')
+  
   try{
-    const docRef = await addDoc(ordersCollection , order);
-    return order.id;
+    const orderCollection = collection( db ,'orders')  
+    const docRef = await addDoc(orderCollection , order);
+    return docRef.id;
   }catch (error){
     console.log("Hubo un error" , error)
+    throw error;
   }
   
 }
