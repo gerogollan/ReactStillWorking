@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
         <p>${product.price}</p>
         <Link to={`/product/${product.id}`}>
            <button className="details-button">
-             Más detalles
+             More details
           </button>  
              
           </Link>
