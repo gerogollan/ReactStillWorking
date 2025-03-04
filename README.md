@@ -11,6 +11,7 @@ Estoy muy contento con lo aprendido durante el curso. Siento que he hecho un pro
 <hr>
 🛠️ Tecnologías utilizadas
 
+
 ⚛️ ReactJS
 
 🌎 React Router DOM
@@ -144,9 +145,9 @@ Estoy muy contento con lo aprendido durante el curso. Siento que he hecho un pro
 
 📌 Si tenés alguna duda o sugerencia, podés contactarme a través de mi GitHub o LinkedIn.
 
-Linkedin www.linkedin.com/in/gerogollan
+[Linkedin](www.linkedin.com/in/gerogollan)
 
-Instagram https://www.instagram.com/gerogollan/
+[Instagram](https://www.instagram.com/gerogollan)
 
 
 <hr>
