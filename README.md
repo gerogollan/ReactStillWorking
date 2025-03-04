@@ -24,7 +24,7 @@ Estoy muy contento con lo aprendido durante el curso. Siento que he hecho un pro
 
 ## 🎯 Funcionalidades
 
-🏠 Home
+- 🏠 Home
 
 📌 Se muestra el NavBar con las 3 categorías de productos: Shoes, Clothing y Accessories. Además, se listan todos los productos en formato de cards.
 
@@ -79,8 +79,6 @@ Estoy muy contento con lo aprendido durante el curso. Siento que he hecho un pro
 <hr>
 
 ## 📸 Capturas de Pantalla
-
-📌 Coloca las capturas de pantalla en la carpeta /assets/images/ y referencialas en el README:
 
 🏠 Home:
 
