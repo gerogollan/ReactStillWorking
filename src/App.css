@@ -57,3 +57,12 @@ body {
   color: #888;
 }
 
+.FooterTextContainer{
+  background-color: #0f0f0fe1;
+    padding: 5px 10px 0 10px;
+    margin: 0;
+}
+
+.FooterH3{
+  font-size: large;
+}

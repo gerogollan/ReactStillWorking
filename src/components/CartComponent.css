@@ -20,6 +20,13 @@ main {
   box-shadow: none;
 }
 
+.PTotal {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: xx-large;
+  color: #5fffb7e6;
+}
+
 .cartItemCard {
   justify-self: center;
   width: 600px;

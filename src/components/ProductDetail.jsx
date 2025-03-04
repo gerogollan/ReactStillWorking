@@ -28,15 +28,15 @@ export default function ProductDetail() {
     }
   };
 
-  // const minCount = 1;
-  // const maxCount = product?.stock;
+ 
   
 
   return (
     <>
-      {loading ? (
-        <BarLoader color="#5fffb7e6" width={700} />
-      ) : (
+      {loading ? <>
+    <h1>Loading...</h1>
+    <BarLoader color="#5fffb7e6" width={700} /> 
+    </>: (
         <div className="PDContainer">
           <div className="leftContainer">
             <img className="PDImage" src={product?.image} alt={product?.description} />

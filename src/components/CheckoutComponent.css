@@ -14,14 +14,23 @@
 form input,
 form select,
 form textarea {
+    padding: 5px 0px;
+    font-family: monospace;
     width: 100%;
-    padding: 15px;
-    margin: 15px 0;
-    border: 1px solid #ddd;
+    margin: 5px 0px 30px 0px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
-    font-size: 18px;
+    font-size: 12px;
+}
+
+.OrderId{
+    color: #5fffb7e6;
+    text-shadow: 1px 1px 20px #5fffb7e6;
+}
+
+label{
+    font-size: xx-large;
 }
 
 form input::placeholder,
@@ -33,7 +42,7 @@ form button {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
@@ -43,6 +52,19 @@ form button {
 
 form button:hover {
     border-color: #5fffa4e6;
+}
+
+.SubmitButton{
+    margin-left: 0px;
+    margin-bottom: 10px;
+
+}
+
+.GoBackButton{
+    padding: 0.5em 1.1em;
+    margin-left: 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.5em;
 }
 
 .CartTextContainer {
@@ -105,6 +127,7 @@ form button:hover {
     background-color: #0f0f0fb3;
     border-radius: 8px;
     margin-bottom: 20px;
+    justify-items: center;
 }
 
 .cartItemDetails {
@@ -147,10 +170,7 @@ hr {
     gap: 10px; 
 }
 
-.PTotal {
-    font-size: xx-large;
-    color: #5fffb7e6;
-}
+
 
 
 
@@ -160,4 +180,29 @@ padding: 30px 0px 5px 0px;
 
 .H2Check{
     padding-bottom: 30px;
+}
+
+.H3Check{
+    font-size: xxx-large;
+    margin: 5px 0px 5px 0px;
+}
+
+li{
+    padding-right: 35px;
+    font-size: 12px;
+    font-family: monospace;
+    margin-bottom: 3px;
+}
+
+.TotalSpan{
+font-size: x-large;
+    display: inline-flex;
+    align-items: center;
+}
+
+.TotalP{
+    color: #5fffb7e6;
+    margin-bottom: 0;
+    padding-left: 10px;
+    margin-top: 0px;
 }

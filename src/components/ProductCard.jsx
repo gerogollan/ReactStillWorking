@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
           className="product-image"
         />
         </Link>
-        <p>${product.price}</p>
+        <p className="ProductPrice" >${product.price}</p>
         <Link to={`/product/${product.id}`}>
            <button className="details-button">
              More details

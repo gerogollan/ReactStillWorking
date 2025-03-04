@@ -1,5 +1,8 @@
 
-
+.PDTitle{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .PDContainer{
     margin: 20px;
@@ -61,13 +64,14 @@ hr{
     justify-self: center;
     width: 400px;
     font-family: monospace;
-    font-size: x-large;
+    font-size: 11px;
     
 }
 
 .PDPrice{
+    text-shadow: 0 0 15px #5fffb7e6;
     margin: 50px 0px;
-    font-size: x-large;
+    font-size: 10px;
     font-family: monospace;
 
 }
@@ -85,16 +89,16 @@ transition: transform 0.5s ease-out;
 
 
 /* botones de agregar y restar */
-.PDCounter {
+/* .PDCounter {
     display: flex;
     align-items: center;
     justify-content:center;
     gap: 0px;
     margin-top: 20px;
     transition: all 0.2s ease-in-out;
-}
+} */
 
-.PDCountButton {
+/* .PDCountButton {
     background: transparent;
     border: 2px solid #5fffb7e6; 
     color: #5fffb7e6;
@@ -105,9 +109,9 @@ transition: transform 0.5s ease-out;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-}
+} */
 
-.ButtonPlus{
+/* .ButtonPlus{
     margin: 0px;
 }
 
@@ -134,4 +138,4 @@ transition: transform 0.5s ease-out;
     min-width: 30px;
     text-align: center;
     transition: all 0.2s ease-in-out;
-}
+} */

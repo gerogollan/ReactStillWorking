@@ -26,15 +26,15 @@ header {
   height:95px;
 }
 
-.logo{
+.logo {
   padding: 5px 21px;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 
 .logo:hover {
   filter: drop-shadow(0 0 5px #5fffb7e6);
-  scale: 1.1;
-  transition: transform 0.2s;
+  transform: scale(1.1);
+  transition: transform 0.1s;
 }
 
 

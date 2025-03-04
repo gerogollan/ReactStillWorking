@@ -20,6 +20,8 @@ main {
 
 h1 {
   padding-top: 70px;
+  margin-bottom: 0px;
+  font-size: 50px;
 }
 
 
@@ -30,6 +32,7 @@ h2{
 }
 
 
-section{
+.ItemListContainerSection{
+justify-items: baseline;
 padding: 27px;
 }

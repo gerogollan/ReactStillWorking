@@ -68,72 +68,79 @@ const CheckoutComponent = () => {
       <div className="CheckoutContainer">
         {orderId ? (
           <div>
-            
             <h1 className="H1Check"> thanks for your purchase </h1>
-            <h2 className="H2Check"> your order id is</h2> {orderId}
-            
+            <h2 className="H2Check"> your order id is</h2> 
+            <h3 className="OrderId">{orderId}</h3>
             <hr></hr>
-
             <ButtonComponent to="/" text="Go Back"></ButtonComponent>
           </div>
         ) : (
-          <div className="FormContainer">
-            <hr></hr>
-            <div>
-              <h3>Products you have in the cart</h3>
-              <ul>
-                {cart.map((product, index) => (
-                  <li key={index}>
-                    {product.title} {product.price} X1
-                  </li>
-                ))}
-              </ul>
+          <>
+            <div className="FormContainer">
+              <hr></hr>
+              <div>
+                <h3 className="h3Check">Products you have in the cart</h3>
+                <ul>
+                  {cart.map((product, index) => (
+                    <li key={index}>
+                      {product.title} $ {product.price} X1
+                    </li>
+                  ))}
+                </ul>
+              </div> 
+
+              <span className="TotalSpan">Total:
+              <p className="TotalP" >${total()}</p>
+              </span>
+
+              <hr></hr>
+              
+              <form onSubmit={handleSubmit}>
+                <div>
+                  <label htmlFor="name">Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={values.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="number">Number:</label>
+                  <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    value={values.number}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <button className="SubmitButton" type="submit">
+                  Submit
+                </button>
+              </form>
+              <ButtonComponent
+                className="GoBackButton"
+                to="/cart"
+                text="Go back"
+              ></ButtonComponent>
             </div>
-
-            <hr></hr>
-
-            <form onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={values.name}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="number">Number:</label>
-                <input
-                  type="number"
-                  id="number"
-                  name="number"
-                  value={values.number}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-
-              <button type="submit">Submit</button>
-            </form>
-            <ButtonComponent to="/cart" text="Go back"></ButtonComponent>
-          </div>
-
+          </>
         )}
-
       </div>
     </>
   );

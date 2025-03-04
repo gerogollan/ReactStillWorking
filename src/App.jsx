@@ -37,13 +37,15 @@ function App() {
           <Route
             exact
             path="/"
-            element={<ItemListContainer text="Welcome to Vanguard" />}
+            element={<ItemListContainer text="Welcome to Vanguard" 
+                                        text2="Look this new styles ⚡"/>}
           />
 
           <Route
             exact
             path="/category/:catId"
-            element={<ItemListContainer text="" />}
+            element={<ItemListContainer text="" 
+                                        text2="your style on fire 🔥"/>}
           />
 
 
@@ -62,8 +64,8 @@ function App() {
       
      
 
-      <footer>
-      <h3> © 2025 Vanguard • Exclusivity & Style in Every Detail </h3>
+      <footer className='FooterTextContainer'>
+      <h3 className='FooterH3'> © 2025 Vanguard • Exclusivity & Style in Every Detail </h3>
       </footer>
       </CartProvider>
   );

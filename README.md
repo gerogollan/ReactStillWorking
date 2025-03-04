@@ -1,41 +1,157 @@
-# React + Vite
+# 🛍️ E-Commerce Vans Inspired - ReactJS
+
+📌 Descripción
+
+Este proyecto es un E-Commerce inspirado en la marca Vans, desarrollado como parte del curso de ReactJS en la academia CoderHouse.
+
+La tienda cuenta con un diseño en blanco y negro con algunos detalles de color y funcionalidades completas para la compra de productos.
+
+Estoy muy contento con lo aprendido durante el curso. Siento que he hecho un proyecto sólido, y aunque su desarrollo ha sido desafiante, el proceso ha sido espectacular. 🚀
+
+<hr>
+🛠️ Tecnologías utilizadas
+
+⚛️ ReactJS
+
+🌎 React Router DOM
+
+🔥 Firebase
+
+🎨 CSS 
+
+<hr>
+
+## 🎯 Funcionalidades
+
+🏠 Home
+
+📌 Se muestra el NavBar con las 3 categorías de productos: Shoes, Clothing y Accessories. Además, se listan todos los productos en formato de cards.
+
+- 🗂️ Categorías
+
+📌 Filtrado de productos según la selección del usuario.
+
+- 🔍 Detalle del Producto
+
+📌 Al hacer clic en un producto, se accede a su detalle, donde se puede agregar al carrito.
+
+- ⏳ Loaders
+
+📌 Implementación de loaders en la espera de carga de datos.
+
+- 🛒 Carrito de Compras
+
+📌 Visualización del carrito en el NavBar con la cantidad de productos seleccionados.
+
+- ✅ Checkout
+
+📌 Formulario para completar los datos y finalizar la compra.
+
+- 🎟️ Pedido Finalizado
+
+📌 Confirmación con número de orden de compra.
+
+- ⚠️ Error 404
+
+📌 Vista personalizada en caso de rutas inexistentes.
+
+<hr>
+
+## 📚 Contenido del curso aplicado en el proyecto
+
+📌 Introducción a React Js y configuración del entorno
+
+📖 Unidad 2: JSX, transpiling y Componentes
+
+📖 Unidad 3: Componentes II, Promises, Asincronía y MAP
+
+📖 Unidad 4: Consumo de API's y Workshop (Hooks, Children y Patrones)
+
+📖 Unidad 5: Routing, Navegación y Eventos
+
+📖 Unidad 6: Context y técnicas de Rendering
+
+📖 Unidad 7: Firebase
+
+🎓 Unidad 8: Workshop Final
+
+<hr>
+
+## 📸 Capturas de Pantalla
+
+📌 Coloca las capturas de pantalla en la carpeta /assets/images/ y referencialas en el README:
+
+🏠 Home:
+
+![Home Page](https://i.imgur.com/1pnX1Gb.png)
+
+👟 Categoría 1 (Shoes):
+
+![Category Shoes](https://i.imgur.com/qp7gX6O.png)
+
+👕 Categoría 2 (Clothing):
+
+![Category Clothing](https://i.imgur.com/clDO8HB.png)
+
+🎒 Categoría 3 (Accessories):
+
+![Category Accesories](https://i.imgur.com/2Rkq6IZ.png)
+
+🔍 Detalle del Producto:
+
+![Product Detail 1](https://i.imgur.com/lZPr15o.png)
+
+![Product Detail 2](https://i.imgur.com/NUIz80p.png)
+
+⏳ Loader en espera de carga:
+![Loaders](https://i.imgur.com/BTsp8FO.png)
+
+⚠️ Error 404 Not Found:
+
+![Page Error 404](https://i.imgur.com/OfVEz8y.png)
+
+🛒 Carrito:
+
+![Cart](https://i.imgur.com/Xp64hr8.png)
+
+✅ Checkout:
+
+![CheckOut Form](https://i.imgur.com/P8jOhT4.png)
+
+🎟️ Pedido Finalizado:
+
+![Finalized Buy](https://i.imgur.com/tV3min8.png)
 
 
-![image](https://github.com/user-attachments/assets/9e0e474e-bdb9-4cfc-8ed6-e1c494ae4e8c)
+<hr>
+
+## 🚀 Instalación y Ejecución
+
+```bash
+<!-- Clonar el repositorio -->
+ git clone https://github.com/gerogollan/ReactStillWorking.git
+
+<!-- Instalar dependencias -->
+ npm install
+
+<!-- Iniciar el servidor de desarrollo -->
+ npm start
+```
+
+<hr>
+
+### 📩 Contacto
+
+📌 Si tenés alguna duda o sugerencia, podés contactarme a través de mi GitHub o LinkedIn.
+
+Linkedin www.linkedin.com/in/gerogollan
+
+Instagram https://www.instagram.com/gerogollan/
 
 
-![image](https://github.com/user-attachments/assets/33506707-b445-4b8a-a8ec-3b8f3e5762a6)
+<hr>
 
+© Licencia
 
-![image](https://github.com/user-attachments/assets/a65163fc-d261-4143-a755-8fba77aa583d)
+Este proyecto está bajo la propiedad de Gerónimo. Todos los derechos reservados. © 2025 Gerónimo Gollan.
 
-
-![image](https://github.com/user-attachments/assets/878878c6-7cce-4fb4-9cd2-97978cfa6f27)
-
-
-![image](https://github.com/user-attachments/assets/97a2f8a0-f7a4-463e-8bc4-bceef4be3b62)
-
-
-
-![image](https://github.com/user-attachments/assets/0747324e-eef7-410c-98af-07d3ff6ad851)
-
-
-![image](https://github.com/user-attachments/assets/546f79e6-af1b-486d-b647-a0a331edbb11)
-
-
-
-![image](https://github.com/user-attachments/assets/9f75693e-25ac-4b33-95f2-66120af20aed)
-
-
-
-
-
-
-
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refressh

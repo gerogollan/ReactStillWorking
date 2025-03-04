@@ -28,14 +28,20 @@ export default function ItemListContainer(props) {
 
   return (
     <>
-    <section>
+    {loading ? 
+    <>
+    <h1>Loading...</h1>
+    <BarLoader color="#5fffb7e6" width={700} /> 
+    </>
+     :<>
+    <section className='ItemListContainerSection'>
       <h1>
         {props.text} {catId}
       </h1>
-      <h2 className="H2text">Look this new styles!</h2>
+      <h2 className="H2text">{props.text2}</h2>
      
       </section>
-     {loading ? <BarLoader color="#5fffb7e6" width={700} />  :
+     
       
       
        
@@ -44,6 +50,7 @@ export default function ItemListContainer(props) {
       <ProductCard key={product.id} product={product} />
       ))}
      </div>
+     </>
        
        }  
 
