@@ -79,8 +79,6 @@ Estoy muy contento con lo aprendido durante el curso. Siento que he hecho un pro
 
 ## 📸 Capturas de Pantalla
 
-📌 Coloca las capturas de pantalla en la carpeta /assets/images/ y referencialas en el README:
-
 🏠 Home:
 
 ![Home Page](https://i.imgur.com/1pnX1Gb.png)
