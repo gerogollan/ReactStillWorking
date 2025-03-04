@@ -73,27 +73,3 @@ function App() {
 
 export default App;
 
-//COSAS POR HACER
-
-
-// ✔
-
-//crear componente de itemCount en el itemdeatil que realize
-//validaciones de (valor minimo, limite por stock)
-
-
-
-
-
-
-//Agregar un Loader en el ItemListContainer y en el ItemDetail ✔
-// utilizando un ternario / pondría una imagen de un skater girando
-//clase 6
-
-//route a checkout donde tiene que haber un formulario con nombre, email✔
-//phone, fecha ,total de la compra, cantidad y data de los items del carrito a llevar✔
-//al terminar la compra se tiene que mostrar el id de la orden✔
-
-
-
-//deployar cuando este todo listo en netlify   y usar ese link para la entrega
