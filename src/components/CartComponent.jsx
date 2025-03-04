@@ -43,28 +43,6 @@ export default function CartComponent(props) {
                   <h3>{product.title}</h3>
                   <p>Price: ${product.price}</p>
                 </div>
-              
-              {/* <div className="PDCounter">
-              <button
-                className="PDCountButton ButtonMinus"
-                onClick={() => setCount(count > minCount ? count - 1 : count)}
-                disabled={count <= minCount}
-              >
-                -
-              </button>
-
-              <span>{count}</span>
-
-              <button
-                className="PDCountButton ButtonPlus"
-                onClick={() => setCount(count < maxCount ? count + 1 : count)}
-                disabled={count >= maxCount}
-              >
-                +
-              </button>
-            </div> */}
-
-
               </div>
             ))}
              <hr />
