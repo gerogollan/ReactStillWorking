@@ -60,7 +60,7 @@ export default function ProductDetail() {
         </div>
       )}
 
-      {/* //añadir mas cosas lindas informacion de  "talles" "cambios, etc" */}
+      
       
     </>
   );
